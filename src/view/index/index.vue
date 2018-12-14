@@ -1,12 +1,48 @@
 <template>
-  <div>
-    <h3 class="title">欢迎来到猫崽管理系统</h3>
+  <div class="index">
+    <el-container>
+      <el-aside></el-aside>
+      <el-container>
+        <el-header>
+          <cat-menu>
+          </cat-menu>
+        </el-header>
+        <el-main>
+          <el-carousel :interval="4000" type="card" height="315px">
+            <el-carousel-item v-for="item in imgList" :key="item.id">
+              <el-row>
+                <el-col :span="24"><img class="banner-img" :src="item.idView"></el-col>
+              </el-row>
+            </el-carousel-item>
+          </el-carousel>
+        </el-main>
+      </el-container>
+    </el-container>
+    <!--<cat-left-bar></cat-left-bar>-->
   </div>
 </template>
 
 <script>
+  import CatLeftBar from '../../components/catLeftBar.vue';
+  import CatMenu from '../../components/catMenu.vue';
   export default {
-    name: "index"
+    name: "index",
+    components: {
+      CatLeftBar,
+      CatMenu
+    },
+    data () {
+      return {
+        imgList: [
+          {id: 0, idView: require('./../../assets/img/cat1.jpg')},
+          {id: 1, idView: require('./../../assets/img/cat2.jpg')},
+          {id: 2, idView: require('./../../assets/img/cat3.jpg')},
+          {id: 3, idView: require('./../../assets/img/cat4.jpg')},
+          {id: 4, idView: require('./../../assets/img/cat5.jpg')},
+          {id: 5, idView: require('./../../assets/img/cat6.jpg')}
+        ]
+      }
+    }
   }
 </script>
 

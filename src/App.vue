@@ -1,8 +1,5 @@
 <template>
   <div id="app">
-    <img src="./assets/img/cats.jpg" alt="">
-    <router-link class="link" to="/index">首页</router-link>
-    <router-link class="link" to="/userCenter">猫崽中心</router-link>
     <router-view></router-view>
   </div>
 </template>
@@ -15,5 +12,13 @@ export default {
 
 <style scoped>
   @import "assets/css/allUse.css";
-  @import "assets/css/app.css";
+  #app {
+    min-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    color: #2c3e50;
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 </style>
