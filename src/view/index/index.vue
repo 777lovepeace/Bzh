@@ -8,7 +8,7 @@
           </cat-menu>
         </el-header>
         <el-main>
-          <el-carousel :interval="4000" type="card" height="315px">
+          <el-carousel :interval="5000" arrow="always" height="500px">
             <el-carousel-item v-for="item in imgList" :key="item.id">
               <el-row>
                 <el-col :span="24"><img class="banner-img" :src="item.idView"></el-col>
@@ -35,11 +35,12 @@
       return {
         imgList: [
           {id: 0, idView: require('./../../assets/img/cat1.jpg')},
-          {id: 1, idView: require('./../../assets/img/cat2.jpg')},
+          {id: 1, idView: require('./../../assets/img/cat8.jpg')},
           {id: 2, idView: require('./../../assets/img/cat3.jpg')},
           {id: 3, idView: require('./../../assets/img/cat4.jpg')},
-          {id: 4, idView: require('./../../assets/img/cat5.jpg')},
-          {id: 5, idView: require('./../../assets/img/cat6.jpg')}
+          {id: 4, idView: require('./../../assets/img/cat9.jpg')},
+          {id: 5, idView: require('./../../assets/img/cat10.jpg')},
+          {id: 6, idView: require('./../../assets/img/cat11.jpg')}
         ]
       }
     }
