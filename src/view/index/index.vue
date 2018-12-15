@@ -1,22 +1,16 @@
 <template>
   <div class="index">
     <el-container>
-      <el-aside></el-aside>
-      <el-container>
-        <el-header>
-          <cat-menu>
-          </cat-menu>
-        </el-header>
-        <el-main>
-          <el-carousel :interval="5000" arrow="always" height="500px">
-            <el-carousel-item v-for="item in imgList" :key="item.id">
-              <el-row>
-                <el-col :span="24"><img class="banner-img" :src="item.idView"></el-col>
-              </el-row>
-            </el-carousel-item>
-          </el-carousel>
-        </el-main>
-      </el-container>
+      <el-header><cat-menu></cat-menu></el-header>
+      <el-main>
+        <el-carousel :interval="5000" arrow="always" type="card" height="500px">
+          <el-carousel-item v-for="item in imgList" :key="item.id">
+            <el-row>
+              <el-col :span="24"><img class="banner-img" :src="item.idView"></el-col>
+            </el-row>
+          </el-carousel-item>
+        </el-carousel>
+      </el-main>
     </el-container>
     <!--<cat-left-bar></cat-left-bar>-->
   </div>

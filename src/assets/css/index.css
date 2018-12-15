@@ -1,22 +1,12 @@
 .el-header, .el-footer {
-  background-color: #fff  ;
   color: #333;
   text-align: center;
   line-height: 60px;
 }
 
-.el-aside {
-  width: 20%;
-  height: 600px;
-  margin-right: 20px;
-  border: 1px solid #e6e6e6;
-  color: #333;
-  text-align: center;
-}
-
 .el-main {
-  margin-top: 10px;
-  background-color: #fff;
+  height: auto;
+  margin-top: 30px;
   color: #333;
   text-align: center;
 }
@@ -25,15 +15,7 @@ body > .el-container {
   margin-bottom: 40px;
 }
 
-.el-container:nth-child(5) .el-aside,
-.el-container:nth-child(6) .el-aside {
-  line-height: 260px;
-}
-
-.el-container:nth-child(7) .el-aside {
-  line-height: 320px;
-}
-
 .banner-img {
-  height: 500px;
+  height: 480px;
+  border-radius: 8px;
 }
