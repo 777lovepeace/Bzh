@@ -1,14 +1,21 @@
 .el-header, .el-footer {
+  height: 70px !important;
+  margin-bottom: 30px;
+  background-color: #fff;
   color: #333;
   text-align: center;
-  line-height: 60px;
+  line-height: 70px;
 }
 
 .el-main {
-  height: auto;
-  margin-top: 30px;
+  width: 1200px;
+  max-width: 1200px !important;
+  margin: 0 auto;
   color: #333;
   text-align: center;
+}
+.el-container {
+  background: none;
 }
 
 body > .el-container {

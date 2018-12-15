@@ -4,9 +4,16 @@
       <el-col :span="10">
         <div class="grid-content logo-content">
           <img class="cat-logo" src="./../assets/img/cat-logo.png" alt="">
-        </div></el-col>
+        </div>
+      </el-col>
       <el-col :span="5.5">
-        <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect" :text-color="#99CC99">
+        <el-menu
+                :default-active="activeIndex"
+                class="el-menu-demo"
+                mode="horizontal"
+                menu-trigger="click"
+                text-color="#ffa54f"
+                active-text-color="#ff4500">
           <el-menu-item index="1">首页</el-menu-item>
           <el-submenu index="2">
             <template slot="title">我们家</template>
@@ -25,10 +32,10 @@
           </el-submenu>
           <el-menu-item index="3" disabled>开发ing</el-menu-item>
           <el-menu-item index="4" disabled>开发ing</el-menu-item>
+          <el-menu-item index="5"><a href="https://www.bilibili.com" target="_blank">去看看</a></el-menu-item>
         </el-menu>
       </el-col>
     </el-row>
-    <div class="line"></div>
   </div>
 </template>
 
@@ -40,9 +47,6 @@
         activeIndex: '1',
         activeIndex2: '1'
       };
-    },
-    methods: {
-      handleSelect(key, keyPath) {}
     }
   }
 </script>
@@ -51,7 +55,7 @@
   @import "./../assets/css/allUse.css";
   .el-row {
     margin-bottom: 20px;
-    line-height: 60px;
+    line-height: 70px;
   }
   .el-row:last-child {
     margin-bottom: 0;
@@ -61,7 +65,7 @@
   }
   .grid-content {
     border-radius: 4px;
-    height: 60px;
+    height: 70px;
   }
   .logo-content {
     background-color: #fff;
@@ -76,5 +80,11 @@
     color: #909399;
     font-weight: bold;
     font-size: 18px;
+  }
+  .el-menu-demo {
+    margin-top: 10px;
+  }
+  .el-submenu__title>.el-submenu__title i {
+    color: #ffa54f !important;
   }
 </style>

@@ -13,7 +13,6 @@ export default {
 <style scoped>
   @import "assets/css/allUse.css";
   #app {
-    min-width: 1200px;
     height: 100%;
     margin: 0 auto;
     text-align: center;
