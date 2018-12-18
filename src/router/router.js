@@ -11,6 +11,7 @@ Vue.use(Router)
 Vue.use(ElementUI)
 
 export default new Router({
+  base: '/',
   routes: [
     {
       path: '/',
