@@ -6,7 +6,8 @@
         <el-carousel :interval="5000" arrow="always" type="card" height="500px">
           <el-carousel-item v-for="item in imgList" :key="item.id">
             <el-row>
-              <el-col :span="24"><img class="banner-img" :src="item.idView"></el-col>
+              <!--<el-col :span="24"><img class="banner-img" :src="item.idView"></el-col>-->
+              <el-col :span="24"></el-col>
             </el-row>
           </el-carousel-item>
         </el-carousel>
