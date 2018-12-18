@@ -12,17 +12,14 @@
         </el-carousel>
       </el-main>
     </el-container>
-    <!--<cat-left-bar></cat-left-bar>-->
   </div>
 </template>
 
 <script>
-  import CatLeftBar from '../../components/catLeftBar.vue';
   import CatMenu from '../../components/catMenu.vue';
   export default {
     name: "index",
     components: {
-      CatLeftBar,
       CatMenu
     },
     data () {

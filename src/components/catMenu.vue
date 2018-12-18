@@ -8,16 +8,19 @@
       </el-col>
       <el-col :span="5.5">
         <el-menu
-                :default-active="activeIndex"
+                :default-active="$route.path"
                 class="el-menu-demo"
                 mode="horizontal"
-                menu-trigger="click"
+                :unique-opened="true"
+                :router="true"
+                menu-trigger="hover"
                 text-color="#ffa54f"
-                active-text-color="#ff4500">
-          <el-menu-item index="1">首页</el-menu-item>
-          <el-submenu index="2">
+                active-text-color="#ff4500"
+                @select="handleSelect">
+          <el-menu-item index="/" :route="{path:'/'}">首页</el-menu-item>
+          <el-submenu index="/">
             <template slot="title">我们家</template>
-            <el-menu-item index="2-1">包崽</el-menu-item>
+            <el-menu-item index="/blog" :route="{path:'/blog'}">包崽</el-menu-item>
             <el-menu-item index="2-2">小王</el-menu-item>
             <el-submenu index="2-3">
               <template slot="title">花菜</template>
@@ -35,6 +38,18 @@
           <el-menu-item index="5"><a href="https://www.bilibili.com" target="_blank">去看看</a></el-menu-item>
         </el-menu>
       </el-col>
+      <el-col :span="8.5">
+        <el-dropdown trigger="click">
+          <span class="el-dropdown-link">
+            <img class="head-portrait" src="./../assets/img/cat-logo.jpg" alt="">
+            <i class="el-icon-arrow-down el-icon--right"></i>
+          </span>
+          <el-dropdown-menu slot="dropdown">
+            <el-dropdown-item><router-link :to="{name: 'Login', params: {user: 1}}">登录</router-link></el-dropdown-item>
+            <el-dropdown-item><router-link :to="{name: 'Login', params: {user: 0}}">注册</router-link></el-dropdown-item>
+          </el-dropdown-menu>
+        </el-dropdown>
+      </el-col>
     </el-row>
   </div>
 </template>
@@ -44,9 +59,12 @@
     name: "cat-menu",
     data() {
       return {
-        activeIndex: '1',
-        activeIndex2: '1'
-      };
+        activeIndex: '/'
+      }
+    },
+    methods: {
+      handleSelect (key, keyPath) {
+      }
     }
   }
 </script>
@@ -55,7 +73,7 @@
   @import "./../assets/css/allUse.css";
   .el-row {
     margin-bottom: 20px;
-    line-height: 70px;
+    line-height: 60px;
   }
   .el-row:last-child {
     margin-bottom: 0;
@@ -65,7 +83,7 @@
   }
   .grid-content {
     border-radius: 4px;
-    height: 70px;
+    height: 60px;
   }
   .logo-content {
     background-color: #fff;
@@ -81,10 +99,15 @@
     font-weight: bold;
     font-size: 18px;
   }
-  .el-menu-demo {
-    margin-top: 10px;
-  }
-  .el-submenu__title>.el-submenu__title i {
+  .el-submenu__title>.el-submenu__title i,
+  .router-link {
     color: #ffa54f !important;
+  }
+  .head-portrait {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #e6e6e6;
+    border-radius: 50%;
+    vertical-align: middle;
   }
 </style>

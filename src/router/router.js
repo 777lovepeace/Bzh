@@ -4,9 +4,8 @@ import Hello from '../components/hello'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import Index from '../view/index/index'
-import UserCenter from '../view/userCenter'
-import UserInfo from '../view/UserInfo'
-import Manage from '../view/manage/index'
+import Login from '../view/login'
+import Blog from '../view/blog/index'
 
 Vue.use(Router)
 Vue.use(ElementUI)
@@ -19,21 +18,14 @@ export default new Router({
       component: Index
     },
     {
-      path: '/manage',
-      name: 'Manage',
-      component: Manage
+      path: '/login',
+      name: 'Login',
+      component: Login
     },
     {
-      path: '/userCenter',
-      name: 'userCenter',
-      component: UserCenter,
-      children: [
-        {
-          path: '/userInfo',
-          name: 'userInfo',
-          component: UserInfo
-        }
-      ]
+      path: '/blog',
+      name: 'Blog',
+      component: Blog
     }
   ]
 })

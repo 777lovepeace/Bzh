@@ -12,3 +12,25 @@ select {
 .fixed {
   position: fixed;
 }
+.el-header, .el-footer {
+  margin-bottom: 30px;
+  background-color: #fff;
+  color: #333;
+  text-align: center;
+  line-height: 60px;
+}
+
+.el-main {
+  width: 1200px;
+  max-width: 1200px !important;
+  margin: 0 auto;
+  color: #333;
+  text-align: center;
+}
+.el-container {
+  background: none;
+}
+
+body > .el-container {
+  margin-bottom: 40px;
+}
