@@ -1,4 +1,9 @@
-a {
+a:link {
+  color: #000000;
+  text-decoration: none;
+}
+a:visited {
+  color: #000000;
   text-decoration: none;
 }
 ul li {
@@ -9,11 +14,17 @@ input,
 select {
   outline: none;
 }
+button {
+  border: none;
+}
 .fixed {
   position: fixed;
 }
-.el-header, .el-footer {
-  margin-bottom: 30px;
+.el-header {
+  width: 100%;
+  min-width: 1200px;
+}
+.el-header {
   background-color: #fff;
   color: #333;
   text-align: center;
@@ -24,10 +35,12 @@ select {
   width: 1200px;
   max-width: 1200px !important;
   margin: 0 auto;
+  padding: 0;
   color: #333;
   text-align: center;
 }
 .el-container {
+  margin: 0 auto;
   background: none;
 }
 

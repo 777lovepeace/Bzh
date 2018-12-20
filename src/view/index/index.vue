@@ -1,15 +1,20 @@
 <template>
   <div class="index">
     <el-container>
-      <el-header><cat-menu></cat-menu></el-header>
+      <el-header class="fixed"><cat-menu></cat-menu></el-header>
       <el-main>
-        <el-carousel :interval="5000" arrow="always" type="card" height="500px">
-          <el-carousel-item v-for="item in imgList" :key="item.id">
-            <el-row>
-              <el-col :span="24"><img class="banner-img" :src="item.idView"></el-col>
-            </el-row>
-          </el-carousel-item>
-        </el-carousel>
+        <div class="login-index">
+          <p>猫崽有限公司</p>
+          <button class="login-btn"><router-link :to="{path:'/login'}">Login</router-link></button>
+        </div>
+        <!--<el-carousel :interval="5000" arrow="always" type="card" height="500px">-->
+        <!--<el-carousel-item v-for="item in imgList" :key="item.id">-->
+        <!--<el-row>-->
+        <!--&lt;!&ndash;<el-col :span="24"><img class="banner-img" :src="item.idView"></el-col>&ndash;&gt;-->
+        <!--<el-col :span="24"></el-col>-->
+        <!--</el-row>-->
+        <!--</el-carousel-item>-->
+        <!--</el-carousel>-->
       </el-main>
     </el-container>
   </div>

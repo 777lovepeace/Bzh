@@ -1,4 +1,19 @@
+.index {
+  margin: 0 auto;
+}
 .banner-img {
   height: 480px;
   border-radius: 8px;
+}
+.login-index {
+  margin-top: 30%;
+  font-size: 24px;
+}
+.login-btn {
+  width: 200px;
+  height: 60px;
+  border: 1px solid #666;
+  background: none;
+  color: #666;
+  font-size: 24px;
 }

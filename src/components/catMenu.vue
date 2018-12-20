@@ -18,24 +18,23 @@
                 active-text-color="#ff4500"
                 @select="handleSelect">
           <el-menu-item index="/" :route="{path:'/'}">首页</el-menu-item>
+          <el-menu-item index="2" disabled>开发ing</el-menu-item>
           <el-submenu index="/">
             <template slot="title">我们家</template>
             <el-menu-item index="/blog" :route="{path:'/blog'}">包崽</el-menu-item>
-            <el-menu-item index="2-2">小王</el-menu-item>
-            <el-submenu index="2-3">
+            <el-menu-item index="3-2">小王</el-menu-item>
+            <el-submenu index="3-3">
               <template slot="title">花菜</template>
-              <el-menu-item index="2-3-1">小姑娘</el-menu-item>
-              <el-menu-item index="2-3-2">大宝</el-menu-item>
+              <el-menu-item index="3-3-1">小姑娘</el-menu-item>
+              <el-menu-item index="3-3-2">大宝</el-menu-item>
             </el-submenu>
-            <el-submenu index="2-4">
+            <el-submenu index="3-4">
               <template slot="title">毛豆</template>
-              <el-menu-item index="2-4-1">皮孩</el-menu-item>
-              <el-menu-item index="2-4-2">皮孩</el-menu-item>
+              <el-menu-item index="3-4-1">皮孩</el-menu-item>
+              <el-menu-item index="3-4-2">皮孩</el-menu-item>
             </el-submenu>
           </el-submenu>
-          <el-menu-item index="3" disabled>开发ing</el-menu-item>
-          <el-menu-item index="4" disabled>开发ing</el-menu-item>
-          <el-menu-item index="5"><a href="https://www.bilibili.com" target="_blank">去看看</a></el-menu-item>
+          <el-menu-item index=""><a href="https://www.bilibili.com" target="_blank">去看看</a></el-menu-item>
         </el-menu>
       </el-col>
       <el-col :span="8.5">
@@ -100,14 +99,19 @@
     font-size: 18px;
   }
   .el-submenu__title>.el-submenu__title i,
-  .router-link {
+  .router-link,
+  .el-dropdown-menu__item>a {
     color: #ffa54f !important;
   }
   .head-portrait {
-    width: 50px;
-    height: 50px;
+    width: 46px;
+    height: 46px;
     border: 1px solid #e6e6e6;
     border-radius: 50%;
     vertical-align: middle;
+  }
+  .el-dropdown {
+    width: 280px;
+    text-align: right;
   }
 </style>
